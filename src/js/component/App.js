@@ -7,6 +7,7 @@ class App extends Component {
 			newItem: "",
 			list: []
 		};
+		this.onKeyUp = this.onKeyUp.bind(this);
 	}
 	//Actualizar el input
 	updateInput(key, value) {
@@ -40,6 +41,12 @@ class App extends Component {
 		this.setState({ list: updatedList });
 	}
 
+	onKeyUp(event) {
+		if (event.charCode === 13) {
+			this.addItem();
+		}
+	}
+
 	render() {
 		return (
 			<div className="App">
@@ -50,6 +57,7 @@ class App extends Component {
 							type="text"
 							placeholder="What needs to be done?"
 							value={this.state.newItem}
+							onKeyPress={this.onKeyUp}
 							onChange={e =>
 								this.updateInput("newItem", e.target.value)
 							}
