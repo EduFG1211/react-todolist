@@ -86,7 +86,9 @@ class App extends Component {
 							})}
 						</ul>
 						<ul>
-							<li>{this.state.list.length} items left</li>
+							<li>
+								You have {this.state.list.length} items left
+							</li>
 						</ul>
 					</div>
 				</div>
