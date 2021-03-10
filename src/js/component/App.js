@@ -45,7 +45,7 @@ class App extends Component {
 			<div className="App">
 				<div>
 					<div className="header">
-						<h2>Todos</h2>
+						<h1>Todos</h1>
 						<input
 							type="text"
 							placeholder="What needs to be done?"
@@ -76,6 +76,8 @@ class App extends Component {
 									</li>
 								);
 							})}
+						</ul>
+						<ul>
 							<li>{this.state.list.length} items left</li>
 						</ul>
 					</div>
